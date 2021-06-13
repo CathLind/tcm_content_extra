@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+    module:
+        - menu_ui
+third_party_settings:
+    menu_ui:
+        available_menus:
+            - main
+        parent: 'main:'
+name: 'Advertising'
+type: advertising
+description: 'Skapar annonser, som sprids på siten utifrån sin storlek. Kontroller storleken på bilderna innan du laddar upp dem. Annonsen har en klickbar länk'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

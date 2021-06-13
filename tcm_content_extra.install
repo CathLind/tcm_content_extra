@@ -1,0 +1,79 @@
+<?php
+// Put the following line in the top of the .install file:
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Add some terms to the Add size vocabulary.
+ */
+function tcm_content_hook_install() {
+  // Machine name of the Taxonomy vocabulary.
+  $vocab = 'add_sizes';
+
+  // Term names to be added.
+  $items = [
+    '260x260',
+    '400x150',
+    '696x120',
+    '926x120',
+    '926x80',
+  ];
+  foreach ($items as $item) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' => $item,
+      'vid' => $vocab,
+    ))->save();
+  }
+}
+
+
+/**
+ * Add some terms to the Books vocabulary.
+ */
+
+  // Machine name of the Taxonomy vocabulary.
+  $vocab = 'books';
+
+  // Term names to be added.
+  $items = [
+    'Christmas Magic',
+    'Deck the Hall',
+    'Fly wings, Fly high!',
+    'Unexpected Journeys',
+      ];
+  foreach ($items as $item) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' => $item,
+      'vid' => $vocab,
+    ))->save();
+  }
+
+
+/**
+ * Add some terms to the Channels vocabulary.
+ */
+
+  // Machine name of the Taxonomy vocabulary.
+  $vocab = 'channel';
+
+  // Term names to be added.
+  $items = [
+    'Blog',
+    'Books',
+    'Food',
+    'Holidays',
+    'How to',
+    'My books',
+    'News',
+    'Video',
+      ];
+  foreach ($items as $item) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' => $item,
+      'vid' => $vocab,
+    ))->save();
+  }
+
+?>

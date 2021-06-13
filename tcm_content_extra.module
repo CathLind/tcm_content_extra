@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains tcm_content_extra.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tcm_content_extra_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tcm_content_extra module.
+    case 'help.page.tcm_content_extra':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Adds extra content types for our sites. Mainly the ones used in catherinelind and grillenborg') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tcm_content_extra_theme() {
+  return [
+    'tcm_content_extra' => [
+      'render element' => 'children',
+    ],
+  ];
+}
