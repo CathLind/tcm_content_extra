@@ -1,7 +1,7 @@
 name: 'TCM content extra'
 type: module
 description: 'Adds extra content types for our sites. Mainly the ones used in catherinelind.com'
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 package: 'TCM'
 dependencies:
   - statistics
